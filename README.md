@@ -353,7 +353,7 @@ To build the projects and prepare them for execution:
 2. **Instrument the Producer**:
    In a first terminal, from the root directory run the following command:
    ```bash
-   for i in $(cat Consumer/instrument.env) 
+   for i in $(cat Producer/instrument.env) 
    do 
     export $i 
    done
@@ -362,7 +362,7 @@ To build the projects and prepare them for execution:
 3. **Instrument the Consumer**:
    In another terminal, from the root directory run the following command:
    ```bash
-   for i in $(cat Producer/instrument.env)
+   for i in $(cat Consumer/instrument.env)
    do 
      export $i
    done
