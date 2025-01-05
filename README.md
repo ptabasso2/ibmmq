@@ -301,7 +301,46 @@ class Program
 }
 ```
 
-## 5. Build Instructions
+
+## 5. Start the Datadog Agent
+
+Run the following command to start the Datadog Agent with the necessary configurations for tracing:
+
+```bash
+docker run -d --name dd-agent-dogfood-jmx \
+  -v /var/run/docker.sock:/var/run/docker.sock:ro \
+  -v /proc/:/host/proc/:ro \
+  -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+  -p 8126:8126 \
+  -p 8125:8125/udp \
+  -e DD_API_KEY=<YOUR_DATADOG_API_KEY> \
+  -e DD_APM_ENABLED=true \
+  -e DD_APM_NON_LOCAL_TRAFFIC=true \
+  -e DD_PROCESS_AGENT_ENABLED=true \
+  -e DD_DOGSTATSD_NON_LOCAL_TRAFFIC="true" \
+  -e DD_LOG_LEVEL=debug \
+  -e DD_LOGS_ENABLED=true \
+  -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
+  -e DD_CONTAINER_EXCLUDE_LOGS="name:datadog-agent" \
+  gcr.io/datadoghq/agent:latest-jmx
+```
+
+Replace `<YOUR_DATADOG_API_KEY>` with your actual Datadog API Key.
+
+## 6. Start the IBM MQ Broker
+
+Run the following command to start the IBM MQ broker container:
+
+```bash
+docker run --rm -d --name ibmmq \
+  --env LICENSE=accept \
+  --env MQ_QMGR_NAME=QM1 \
+  -e MQ_APP_PASSWORD=passw0rd \
+  -p 1414:1414 -p 9443:9443 \
+  icr.io/ibm-messaging/mq:latest
+```
+
+## 7. Build Instructions
 
 To build the projects and prepare them for execution:
 
@@ -342,43 +381,6 @@ To build the projects and prepare them for execution:
    dotnet run
    ```
 
-## 6. Start the Datadog Agent
-
-Run the following command to start the Datadog Agent with the necessary configurations for tracing:
-
-```bash
-docker run -d --name dd-agent-dogfood-jmx \
-  -v /var/run/docker.sock:/var/run/docker.sock:ro \
-  -v /proc/:/host/proc/:ro \
-  -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
-  -p 8126:8126 \
-  -p 8125:8125/udp \
-  -e DD_API_KEY=<YOUR_DATADOG_API_KEY> \
-  -e DD_APM_ENABLED=true \
-  -e DD_APM_NON_LOCAL_TRAFFIC=true \
-  -e DD_PROCESS_AGENT_ENABLED=true \
-  -e DD_DOGSTATSD_NON_LOCAL_TRAFFIC="true" \
-  -e DD_LOG_LEVEL=debug \
-  -e DD_LOGS_ENABLED=true \
-  -e DD_LOGS_CONFIG_CONTAINER_COLLECT_ALL=true \
-  -e DD_CONTAINER_EXCLUDE_LOGS="name:datadog-agent" \
-  gcr.io/datadoghq/agent:latest-jmx
-```
-
-Replace `<YOUR_DATADOG_API_KEY>` with your actual Datadog API Key.
-
-## 7. Start the IBM MQ Broker
-
-Run the following command to start the IBM MQ broker container:
-
-```bash
-docker run --rm -d --name ibmmq \
-  --env LICENSE=accept \
-  --env MQ_QMGR_NAME=QM1 \
-  -e MQ_APP_PASSWORD=passw0rd \
-  -p 1414:1414 -p 9443:9443 \
-  icr.io/ibm-messaging/mq:latest
-```
 
 ## 8. Verify Traces in Datadog
 
