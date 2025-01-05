@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Producer Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Producer/bin/Debug/net8.0/Producer.dll",
+            "cwd": "${workspaceFolder}/Producer",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/Producer/instrument.env"
+        },
+        {
+            "name": "Consumer Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Consumer/bin/Debug/net8.0/Consumer.dll",
+            "cwd": "${workspaceFolder}/Consumer",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "envFile": "${workspaceFolder}/Consumer/instrument.env"
+        }
+    ]
+}

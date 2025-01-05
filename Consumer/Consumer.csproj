@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+      <NoWarn>CS8600</NoWarn>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Datadog.Trace" Version="3.7.0" />
+    <PackageReference Include="IBMMQDotnetClient" Version="9.4.1" />
+  </ItemGroup>
+
+</Project>

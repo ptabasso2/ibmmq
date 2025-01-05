@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0O7tVNnCMgU=",
+  "success": true,
+  "projectFilePath": "/root/ibmmq/Producer/Producer.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/datadog.trace/3.7.0/datadog.trace.3.7.0.nupkg.sha512",
+    "/root/.nuget/packages/ibmmqdotnetclient/9.4.1/ibmmqdotnetclient.9.4.1.nupkg.sha512",
+    "/root/.nuget/packages/system.diagnostics.diagnosticsource/4.4.1/system.diagnostics.diagnosticsource.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}

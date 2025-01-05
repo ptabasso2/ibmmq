@@ -1,0 +1,198 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "Datadog.Trace/3.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "4.4.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Datadog.Trace.Manual.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Datadog.Trace.Manual.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "IBMMQDotnetClient/9.4.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/amqmdnetstd.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/amqmdnetstd.dll": {}
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.4.1": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Datadog.Trace/3.7.0": {
+      "sha512": "AkGSJ3UU6rhp/1H313Yguz8XYbbrnWl3KzZs8we35dKHzdwUl8m0sXnFqsGuYv1QogdIGBrBME0R1Qa4pT9r8A==",
+      "type": "package",
+      "path": "datadog.trace/3.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "datadog.trace.3.7.0.nupkg.sha512",
+        "datadog.trace.nuspec",
+        "lib/net461/Datadog.Trace.Manual.dll",
+        "lib/net461/Datadog.Trace.Manual.xml",
+        "lib/netcoreapp3.1/Datadog.Trace.Manual.dll",
+        "lib/netcoreapp3.1/Datadog.Trace.Manual.xml",
+        "lib/netstandard2.0/Datadog.Trace.Manual.dll",
+        "lib/netstandard2.0/Datadog.Trace.Manual.xml",
+        "packageIcon.png"
+      ]
+    },
+    "IBMMQDotnetClient/9.4.1": {
+      "sha512": "DqPtV5849wdSAKynsthYkQ/MWzQjnQWws/bwMcTTtZeMqFV3+aJpsfmH5SOcD6Susxb2p1ThoawTT0AMdoNppg==",
+      "type": "package",
+      "path": "ibmmqdotnetclient/9.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ibmmqdotnetclient.9.4.1.nupkg.sha512",
+        "ibmmqdotnetclient.nuspec",
+        "lib/net8.0/amqmdnetstd.dll",
+        "licenses/LA_cs.rtf",
+        "licenses/LA_de.rtf",
+        "licenses/LA_el.rtf",
+        "licenses/LA_en.rtf",
+        "licenses/LA_es.rtf",
+        "licenses/LA_fr.rtf",
+        "licenses/LA_in.rtf",
+        "licenses/LA_it.rtf",
+        "licenses/LA_ja.rtf",
+        "licenses/LA_ko.rtf",
+        "licenses/LA_lt.rtf",
+        "licenses/LA_pl.rtf",
+        "licenses/LA_pt.rtf",
+        "licenses/LA_ru.rtf",
+        "licenses/LA_sl.rtf",
+        "licenses/LA_tr.rtf",
+        "licenses/LA_zh.rtf",
+        "licenses/LA_zh_TW.rtf",
+        "licenses/non_ibm_license.rtf",
+        "licenses/notices.rtf"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/4.4.1": {
+      "sha512": "U/KcC19fyLsPN1GLmeU2zQq15MMVcPwMOYPADVo1+WIoJpvMHxrzvl+BLLZwTEZSneGwaPFZ0aWr0nJ7B7LSdA==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/4.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
+        "ref/netcoreapp2.0/_._",
+        "system.diagnostics.diagnosticsource.4.4.1.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "Datadog.Trace >= 3.7.0",
+      "IBMMQDotnetClient >= 9.4.1"
+    ]
+  },
+  "packageFolders": {
+    "/root/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/root/ibmmq/Consumer/Consumer.csproj",
+      "projectName": "Consumer",
+      "projectPath": "/root/ibmmq/Consumer/Consumer.csproj",
+      "packagesPath": "/root/.nuget/packages/",
+      "outputPath": "/root/ibmmq/Consumer/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/root/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "dependencies": {
+          "Datadog.Trace": {
+            "target": "Package",
+            "version": "[3.7.0, )"
+          },
+          "IBMMQDotnetClient": {
+            "target": "Package",
+            "version": "[9.4.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/root/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
