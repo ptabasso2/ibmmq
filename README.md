@@ -116,12 +116,11 @@ class Program
                 };
                 message.WriteString("Hello from Producer!");
 
-                // Debugging: Create a dictionary to capture headers for logging
+                // Create a dictionary to capture headers for logging
                 var debugHeaders = new Dictionary<string, string>(); 
                 
                 // Inject trace context into message properties
                 var spanContextInjector = new SpanContextInjector();
-                //spanContextInjector.Inject(new Dictionary<string, string>(), (headers, name, value) => message.SetStringProperty(name, value), span.Context);
                 spanContextInjector.Inject(debugHeaders, (headers, name, value) =>
                 {
                 
@@ -138,7 +137,7 @@ class Program
                 }, scope.Span.Context);
 
 
-                // Debugging: Display all headers after injection
+                // Display all headers after injection
                 Console.WriteLine("Headers injected into the message:");
                 foreach (var kvp in debugHeaders)
                 {
